@@ -30,6 +30,64 @@
     <marquee behavior="" direction="vertical" class="text-orange-600 italic text-9xl p-32 bg-gray-600">Javascript is
         <span class="text-green-500">awesome.....</span>
     </marquee>
+
+    <div class="bg-black w-[20%] mx-auto rounded-2xl my-5 py-16">
+        <div class="bg-gray-900 py-20 text-white text-right -mt-16 rounded-2xl font-bold text-2xl p-2">
+            <input type="text" name="clock" id="clock"
+                class="text-left p-10 block rounded mx-auto font-bold text-orange-600 ">
+        </div>
+        <div class="grid grid-cols-4 grid-rows-5 p-4">
+            <button class="font-bold text-xl text-white m-3 bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value=''">AC</button>
+            <button class="font-bold text-xl text-white m-3 bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value=clock.value.toString().slice(0,-1)">DEL</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value=clock.value/100">%</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='/'">/</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='7'">7</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='8'">8</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='9'">9</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='*'">*</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='4'">4</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='5'">5</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='6'">6</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='+'">+</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='1'">1</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='2'">2</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='3'">3</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px]"
+                onclick="clock.value+='-'">-</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[90px] h-[50px] text-left"
+                onclick="clock.value+='0'">0</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px] ml-20"
+                onclick="clock.value+='.'">.</button>
+            <button class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px] ml-20"
+                onclick="clock.value=eval(clock.value)">=</button>
+
+
+        </div>
+    </div>
+    <div class="text-center m-5">
+        <p id="number" class="text-4xl color">0</p>
+        <button onclick="decrease()" class="p-3 bg-fuchsia-600 text-white font-semibold w-28 border-4">Decrease</button>
+        <button onclick=" document.getElementById('number').innerHTML = number = 0;"
+            class="p-3 bg-red-500 text-white font-semibold w-20 border-2">Reset</button>
+        <button onclick="increase()" class="p-3 bg-green-600 text-white font-semibold w-28 border-4">Increase</button>
+    </div>
+
+
     <script>
         // let x = 5; 
         // let y = 10;
@@ -108,14 +166,14 @@
         // ];
         // document.write(age[4]);
 
-        document.getElementById('kachi').style.backgroundColor = 'green';
-        var ben = {
-            name: 'Kachi',
-            age: 50,
-            Phone: '0812568733',
-            address: 'ph',
-        };
-        document.write(ben.name + ' ' + '</br>' + ben.age + ' ' + '</br>' + ben.Phone + ' ' + '</br>' + ben.address);
+        // document.getElementById('kachi').style.backgroundColor = 'green';
+        // var ben = {
+        //     name: 'Kachi',
+        //     age: 50,
+        //     Phone: '0812568733',
+        //     address: 'ph',
+        // };
+        // document.write(ben.name + ' ' + '</br>' + ben.age + ' ' + '</br>' + ben.Phone + ' ' + '</br>' + ben.address);
         // var x = myFunction(4, 3);
 
         // function myFunction(a, b) {
@@ -129,47 +187,31 @@
         //   var x = 20;
         //   document.write(x);
         // }
-        var person = {
-            FirstName: 'Jane',
-            LastName: 'Juliet',
-            Age: 44,
-            Phone: '123456789',
-            FullName: function() {
-                return this.FirstName + ' ' + this.LastName;
+        // var person = {
+        //     FirstName: 'Jane',
+        //     LastName: 'Juliet',
+        //     Age: 44,
+        //     Phone: '123456789',
+        //     FullName: function() {
+        //         return this.FirstName + ' ' + this.LastName;
+        //     }
+        // }
+        // document.write(person.FullName(
+
+        var number = 0;
+
+        function increase() {
+            document.getElementById('number').innerHTML = number++;
+        }
+
+        function decrease() {
+            if (number >= 0) {
+                number = number;
+                document.getElementById('number').innerHTML = number--;
             }
         }
-        document.write(person.FullName());
     </script>
 
-    <div class="bg-black w-[20%] mx-auto rounded-2xl my-5 py-16">
-        <div class="bg-gray-900 py-20 text-white text-right -mt-16 rounded-2xl font-bold text-2xl p-2">
-          <input type="text" name="clock" id="clock"  class="text-left p-10 block rounded mx-auto font-bold text-orange-600 ">
-        </div>
-        <div class="grid grid-cols-4 grid-rows-5 p-4">
-            <button class="font-bold text-xl text-white m-3 bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value=''">AC</button>
-            <button class="font-bold text-xl text-white m-3 bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value=clock.value.toString().slice(0,-1)">DEL</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value=clock.value/100">%</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='/'">/</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='7'">7</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='8'">8</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='9'">9</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='*'">*</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='4'">4</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='5'">5</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='6'">6</button>
-            <button
-                class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='+'">+</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='1'">1</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='2'">2</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='3'">3</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px]" onclick="clock.value+='-'">-</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[90px] h-[50px] text-left" onclick="clock.value+='0'">0</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-slate-600 rounded-full w-[50px] h-[50px] ml-20" onclick="clock.value+='.'">.</button>
-            <button class="font-bold text-2xl p-2 m-3 text-white bg-orange-600 rounded-full w-[50px] h-[50px] ml-20" onclick="clock.value=eval(clock.value)">=</button>
-
-
-        </div>
-    </div>
 
 </body>
 
